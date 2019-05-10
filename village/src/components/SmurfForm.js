@@ -12,7 +12,7 @@ class SmurfForm extends Component {
     console.log("SmurfForm constructor props", props)
   }
 
-  addSmurf = (e) => {
+  addSmurf = e => {
     console.log("Add new smurf state", this.state)
     e.preventDefault();
     // add code to create the smurf using the api
@@ -24,7 +24,6 @@ class SmurfForm extends Component {
           age: '',
           height: ''
         });
-        this.props.history.push('http://localhost:3333/smurfs');
       })
       .catch(err => {
         console.log(err);
